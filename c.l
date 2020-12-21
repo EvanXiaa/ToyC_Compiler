@@ -26,10 +26,10 @@ WS  [ \t\v\n\f]
 #include "node.h"
 #include "c.tab.hpp"
 
-extern int sym_type(const char *);  /* returns type from symbol table */
-#define sym_type(identifier) IDENTIFIER /* with no symbol table, fake it
+extern int sym_type(const char *);  /*返回符号表类型 */
+#define sym_type(identifier) IDENTIFIER /* 对于identifier类型补充一个符号表
 
-extern void yyerror(const char *);  /* prints grammar violation message */
+extern void yyerror(const char *);  /* print语法错误信息 */
 static void comment(void);
 static int check_type(void);
 #define YY_DECL extern "C" int yylex()

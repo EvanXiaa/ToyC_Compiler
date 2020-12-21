@@ -39,14 +39,14 @@ static Type *typeOf(const IdentiferNode &type, bool isPtr) {
     return Type::getVoidTy(llvmContext);
 }
 
-static Value *findIdentifierValue(CodeGenContext &context, string name) {
+static Value *findIdentifierValue(CodeGenContext &context, string name) {//搜索符号表
     if (context.isBlocksEmpty()) {
-        cout << "Checking global" << endl;
+        cout << "全局搜索" << endl;
         goto checkglobal;
     } else if (context.locals().find(name) != context.locals().end()) {
         return context.locals()[name];
     } else {
-        // Search in parent block.
+        // 进入上一级搜索
         CodeGenBlock *parentBlock = context.currentCgenBlock();
         while (parentBlock->parent != nullptr) {
             if (parentBlock->parent->locals.find(name) !=
@@ -64,11 +64,11 @@ static Value *findIdentifierValue(CodeGenContext &context, string name) {
     if (gvar) {
         return gval;
     } else {
-        cerr << "**** Error Undeclared Variable: " << name << endl;
+        cerr << "**** Error 未定义的变量: " << name << endl;
         return nullptr;
     }
 
-    cerr << "**** Error Undeclared Variable: " << name << endl;
+    cerr << "**** Error 未定义的变量: " << name << endl;
     return nullptr;
 }
 

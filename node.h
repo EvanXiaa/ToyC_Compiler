@@ -24,7 +24,7 @@ class ASTNode {
 public:
     bool debug = true;
 
-    virtual Value *codeGen(CodeGenContext &context) { return NULL; }
+    virtual Value *codeGen(CodeGenContext &context) { return NULL; }/*代码生成*/
 };
 
 class ExprNode : public ASTNode {
@@ -33,11 +33,11 @@ class ExprNode : public ASTNode {
 class StmtNode : public ASTNode {
 };
 
-class LongNode : public ExprNode {
+class LongNode : public ExprNode {//长整形结点
 public:
     long value;
 
-    LongNode(long _value) : value(_value) { cout << "LongNode: " << value << endl; }
+    LongNode(long _value) : value(_value) { cout << "长整形结点: " << value << endl; }
 
     LongNode(int uop, ExprNode *exprNode) {
         value = ((LongNode *) exprNode)->value;
@@ -52,7 +52,7 @@ public:
     virtual Value *codeGen(CodeGenContext &context);
 };
 
-class CharNode : public ExprNode {
+class CharNode : public ExprNode {//字符型结点
 public:
     char value;
 
@@ -61,14 +61,14 @@ public:
     virtual Value *codeGen(CodeGenContext &context);
 };
 
-class IntNode : public ExprNode {
+class IntNode : public ExprNode {//整形结点
 public:
     int value;
 
-    IntNode(int value) : value(value) { cout << "INTNODE: " << value << endl; }
+    IntNode(int value) : value(value) { cout << "整形结点: " << value << endl; }
 
     IntNode(int uop, ExprNode *exprNode) {
-        cout << "INTNODE\n";
+        cout << "整形结点\n";
         value = ((IntNode *) exprNode)->value;
         switch (uop) {
             case '-':
@@ -81,7 +81,7 @@ public:
     virtual Value *codeGen(CodeGenContext &context);
 };
 
-class DoubleNode : public ExprNode {
+class DoubleNode : public ExprNode {//双精度浮点结点
 public:
     double value;
 
@@ -100,12 +100,12 @@ public:
     virtual Value *codeGen(CodeGenContext &context);
 };
 
-class BoolNode : public ExprNode {
+class BoolNode : public ExprNode {//布尔结点
 public:
     bool value = false;
 
     BoolNode(string &name) {
-        cout << "Boolean Node: " << name << endl;
+        cout << "布尔结点: " << name << endl;
         if (name.compare("true") == 0) {
             value = true;
         } else {
@@ -619,7 +619,7 @@ public:
 
 
     DoWhileLoopNode(ExprNode *exprNode, BlockNode *_block) {
-        cout << "WHile Node 1" << endl;
+        cout << "While Node 1" << endl;
         cout << typeid(*exprNode).name() << endl;
         cond = (ExprBoolNode *) exprNode;
         block = _block;
