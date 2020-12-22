@@ -16,10 +16,11 @@ class VariableDeclaration;
 
 class CommonDeclaration;
 
-typedef vector<StmtNode *> StatementList;
-typedef vector<ExprNode *> ExpressionList;
-typedef vector<VariableDeclaration *> VariableList;
+typedef vector<StmtNode *> StatementList;//语句列表
+typedef vector<ExprNode *> ExpressionList;//表达式列表
+typedef vector<VariableDeclaration *> VariableList;//变量声明列表
 
+//AST结点
 class ASTNode {
 public:
     bool debug = true;
@@ -27,12 +28,15 @@ public:
     virtual Value *codeGen(CodeGenContext &context) { return NULL; }
 };
 
+//表达式结点
 class ExprNode : public ASTNode {
 };
 
+//语句结点
 class StmtNode : public ASTNode {
 };
 
+//长整型结点
 class LongNode : public ExprNode {
 public:
     long value;
@@ -52,6 +56,7 @@ public:
     virtual Value *codeGen(CodeGenContext &context);
 };
 
+//字符型结点
 class CharNode : public ExprNode {
 public:
     char value;
@@ -61,6 +66,7 @@ public:
     virtual Value *codeGen(CodeGenContext &context);
 };
 
+//整型结点
 class IntNode : public ExprNode {
 public:
     int value;
@@ -81,6 +87,7 @@ public:
     virtual Value *codeGen(CodeGenContext &context);
 };
 
+//双精度型结点
 class DoubleNode : public ExprNode {
 public:
     double value;
@@ -100,6 +107,7 @@ public:
     virtual Value *codeGen(CodeGenContext &context);
 };
 
+//布尔型结点
 class BoolNode : public ExprNode {
 public:
     bool value = false;
@@ -120,6 +128,7 @@ public:
     virtual Value *codeGen(CodeGenContext &context);
 };
 
+//布尔表达式结点
 class ExprBoolNode : public ExprNode {
 public:
     ExprNode *lhs;
@@ -135,6 +144,7 @@ public:
     virtual Value *codeGen(CodeGenContext &context);
 };
 
+//字符串结点
 class StringNode : public ExprNode {
 public:
     string value;
@@ -145,7 +155,7 @@ public:
 };
 
 // ---------------
-
+//标识符结点
 class IdentiferNode : public ExprNode {
 public:
     string name;
@@ -157,6 +167,7 @@ public:
     virtual Value *codeGen(CodeGenContext &context);
 };
 
+//函数调用结点
 class FunctionCallNode : public ExprNode {
 public:
     const IdentiferNode &id;
@@ -170,6 +181,7 @@ public:
     virtual Value *codeGen(CodeGenContext &context);
 };
 
+//双目运算结点
 class BinaryOperatorNode : public ExprNode {
 public:
     int op;
@@ -196,6 +208,7 @@ public:
     virtual Value *codeGen(CodeGenContext &context);
 };
 
+//单目运算结点
 class UnaryOperatorNode : public ExprNode {
 public:
     int op;
@@ -214,6 +227,7 @@ public:
     virtual Value *codeGen(CodeGenContext &context);
 };
 
+//
 class BlockNode : public ExprNode {
 public:
     StatementList statements;
