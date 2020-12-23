@@ -25,7 +25,7 @@ class ASTNode {
 public:
     bool debug = true;
 
-    virtual Value *codeGen(CodeGenContext &context) { return NULL; }
+    virtual Value *codeGen(CodeGenContext &context) { return NULL; }/*代码生成*/
 };
 
 //表达式结点
@@ -36,12 +36,13 @@ class ExprNode : public ASTNode {
 class StmtNode : public ASTNode {
 };
 
+
 //长整型结点
 class LongNode : public ExprNode {
 public:
     long value;
 
-    LongNode(long _value) : value(_value) { cout << "LongNode: " << value << endl; }
+    LongNode(long _value) : value(_value) { cout << "长整形结点: " << value << endl; }
 
     LongNode(int uop, ExprNode *exprNode) {
         value = ((LongNode *) exprNode)->value;
@@ -56,6 +57,7 @@ public:
     virtual Value *codeGen(CodeGenContext &context);
 };
 
+
 //字符型结点
 class CharNode : public ExprNode {
 public:
@@ -66,15 +68,16 @@ public:
     virtual Value *codeGen(CodeGenContext &context);
 };
 
+
 //整型结点
 class IntNode : public ExprNode {
 public:
     int value;
 
-    IntNode(int value) : value(value) { cout << "INTNODE: " << value << endl; }
+    IntNode(int value) : value(value) { cout << "整形结点: " << value << endl; }
 
     IntNode(int uop, ExprNode *exprNode) {
-        cout << "INTNODE\n";
+        cout << "整形结点\n";
         value = ((IntNode *) exprNode)->value;
         switch (uop) {
             case '-':
@@ -86,6 +89,7 @@ public:
 
     virtual Value *codeGen(CodeGenContext &context);
 };
+
 
 //双精度型结点
 class DoubleNode : public ExprNode {
@@ -107,13 +111,14 @@ public:
     virtual Value *codeGen(CodeGenContext &context);
 };
 
+
 //布尔型结点
 class BoolNode : public ExprNode {
 public:
     bool value = false;
 
     BoolNode(string &name) {
-        cout << "Boolean Node: " << name << endl;
+        cout << "布尔结点: " << name << endl;
         if (name.compare("true") == 0) {
             value = true;
         } else {
@@ -633,7 +638,7 @@ public:
 
 
     DoWhileLoopNode(ExprNode *exprNode, BlockNode *_block) {
-        cout << "WHile Node 1" << endl;
+        cout << "While Node 1" << endl;
         cout << typeid(*exprNode).name() << endl;
         cond = (ExprBoolNode *) exprNode;
         block = _block;
