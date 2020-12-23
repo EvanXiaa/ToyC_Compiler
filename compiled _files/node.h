@@ -16,33 +16,28 @@ class VariableDeclaration;
 
 class CommonDeclaration;
 
-typedef vector<StmtNode *> StatementList;//语句列表
-typedef vector<ExprNode *> ExpressionList;//表达式列表
-typedef vector<VariableDeclaration *> VariableList;//变量声明列表
+typedef vector<StmtNode *> StatementList;
+typedef vector<ExprNode *> ExpressionList;
+typedef vector<VariableDeclaration *> VariableList;
 
-//AST结点
 class ASTNode {
 public:
     bool debug = true;
 
-    virtual Value *codeGen(CodeGenContext &context) { return NULL; }/*代码生成*/
+    virtual Value *codeGen(CodeGenContext &context) { return NULL; }
 };
 
-//表达式结点
 class ExprNode : public ASTNode {
 };
 
-//语句结点
 class StmtNode : public ASTNode {
 };
 
-
-//长整型结点
 class LongNode : public ExprNode {
 public:
     long value;
 
-    LongNode(long _value) : value(_value) { cout << "长整形结点: " << value << endl; }
+    LongNode(long _value) : value(_value) { cout << "LongNode: " << value << endl; }
 
     LongNode(int uop, ExprNode *exprNode) {
         value = ((LongNode *) exprNode)->value;
@@ -57,8 +52,6 @@ public:
     virtual Value *codeGen(CodeGenContext &context);
 };
 
-
-//字符型结点
 class CharNode : public ExprNode {
 public:
     char value;
@@ -68,16 +61,14 @@ public:
     virtual Value *codeGen(CodeGenContext &context);
 };
 
-
-//整型结点
 class IntNode : public ExprNode {
 public:
     int value;
 
-    IntNode(int value) : value(value) { cout << "整形结点: " << value << endl; }
+    IntNode(int value) : value(value) { cout << "INTNODE: " << value << endl; }
 
     IntNode(int uop, ExprNode *exprNode) {
-        cout << "整形结点\n";
+        cout << "INTNODE\n";
         value = ((IntNode *) exprNode)->value;
         switch (uop) {
             case '-':
@@ -90,8 +81,6 @@ public:
     virtual Value *codeGen(CodeGenContext &context);
 };
 
-
-//双精度型结点
 class DoubleNode : public ExprNode {
 public:
     double value;
@@ -111,14 +100,12 @@ public:
     virtual Value *codeGen(CodeGenContext &context);
 };
 
-
-//布尔型结点
 class BoolNode : public ExprNode {
 public:
     bool value = false;
 
     BoolNode(string &name) {
-        cout << "布尔结点: " << name << endl;
+        cout << "Boolean Node: " << name << endl;
         if (name.compare("true") == 0) {
             value = true;
         } else {
@@ -133,7 +120,6 @@ public:
     virtual Value *codeGen(CodeGenContext &context);
 };
 
-//布尔表达式结点
 class ExprBoolNode : public ExprNode {
 public:
     ExprNode *lhs;
@@ -149,7 +135,6 @@ public:
     virtual Value *codeGen(CodeGenContext &context);
 };
 
-//字符串结点
 class StringNode : public ExprNode {
 public:
     string value;
@@ -160,7 +145,7 @@ public:
 };
 
 // ---------------
-//标识符结点
+
 class IdentiferNode : public ExprNode {
 public:
     string name;
@@ -172,7 +157,6 @@ public:
     virtual Value *codeGen(CodeGenContext &context);
 };
 
-//函数调用结点
 class FunctionCallNode : public ExprNode {
 public:
     const IdentiferNode &id;
@@ -186,7 +170,6 @@ public:
     virtual Value *codeGen(CodeGenContext &context);
 };
 
-//双目运算结点
 class BinaryOperatorNode : public ExprNode {
 public:
     int op;
@@ -213,7 +196,6 @@ public:
     virtual Value *codeGen(CodeGenContext &context);
 };
 
-//单目运算结点
 class UnaryOperatorNode : public ExprNode {
 public:
     int op;
@@ -232,7 +214,6 @@ public:
     virtual Value *codeGen(CodeGenContext &context);
 };
 
-//
 class BlockNode : public ExprNode {
 public:
     StatementList statements;
@@ -638,7 +619,7 @@ public:
 
 
     DoWhileLoopNode(ExprNode *exprNode, BlockNode *_block) {
-        cout << "While Node 1" << endl;
+        cout << "WHile Node 1" << endl;
         cout << typeid(*exprNode).name() << endl;
         cond = (ExprBoolNode *) exprNode;
         block = _block;
