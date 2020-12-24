@@ -299,9 +299,6 @@ direct_declarator
 		;
 
 
-enumeration_constant		/* before it has been defined as such */
-	: IDENTIFIER
-	;
 
 enum_specifier
 	: ENUM '{' enumerator_list '}'
@@ -316,10 +313,6 @@ enumerator_list
 	| enumerator_list ',' enumerator
 	;
 
-enumerator	/* identifiers must be flagged as ENUMERATION_CONSTANT */
-	: enumeration_constant '=' constant_expression
-	| enumeration_constant
-	;
 
 
 
@@ -382,7 +375,7 @@ initializer_list
 	| initializer_list ',' designation initializer
 	| initializer_list ',' initializer
 	;
-	;
+
 
 //Input: ExprNode:(declarator)
 //Input: ExprNode: initializer

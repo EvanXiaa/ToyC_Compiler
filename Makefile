@@ -22,7 +22,7 @@ c.lex.cpp: c.l c.tab.hpp
 	flex -o c.lex.cpp -l c.l
 
 %.o: %.cpp
-	g++ -c $(CPPFLAGS) -o $@ $< -fpermissive
+	g++ -c -o $@ $< $(CPPFLAGS) -fpermissive
 
 
 cc: $(OBJS)

@@ -8,13 +8,20 @@ using namespace std;
 extern void yyerror(const char *);
 
 void CodeGenContext::generateCode(BlockNode &rootNode) {
-    cout << "Generating code for ROOT...";
+    cout << "开始代码生成";
     rootNode.codeGen(*this);
-    module->dump();
+    //生成BC文件
+    string bcfile = "code.bc";
+    llvm::raw_ostream *out = new llvm::raw_fd_ostream(bcFile, errInfo, sys::fs::F_None);
+    llvm::WriteBitcodeToFile(*module, *out);
+    out->flush();
+    delete out;
 }
 
+
+///该函数用于获取标识符的type
 static Type *typeOf(const IdentiferNode &type, bool isPtr) {
-    cout << "Getting the type of: " << type.name << endl;
+    cout << "获取类型: " << type.name << endl;
     if (type.name.compare("long") == 0) {
         if (isPtr)
             return Type::getInt64PtrTy(llvmContext);

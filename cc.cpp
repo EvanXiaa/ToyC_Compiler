@@ -4,7 +4,8 @@
 #include "node.h"
 #include "c.tab.hpp"
 #include <assert.h>
-#include <llvm/Bitcode/ReaderWriter.h>
+#include <llvm/Bitcode/BitcodeReader.h>
+#include <llvm/Bitcode/BitcodeWriter.h>
 
 using namespace std;
 
