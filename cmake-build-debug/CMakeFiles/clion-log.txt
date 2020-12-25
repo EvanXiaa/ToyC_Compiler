@@ -1,1 +1,17 @@
-CMakeLists.txt not found in /Users/xiayifan/Desktop/Toy-C-Compiler-using-Flex-Bison-LLVM-master Select CMakeLists.txt file...
+/Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - Unix Makefiles" /Users/xiayifan/Desktop/Toy-C-Compiler-using-Flex-Bison-LLVM-master
+CMake Warning (dev) in CMakeLists.txt:
+  No project() command is present.  The top-level CMakeLists.txt file must
+  contain a literal, direct call to the project() command.  Add a line of
+  code such as
+
+    project(ProjectName)
+
+  near the top of the file, but after cmake_minimum_required().
+
+  CMake is pretending there is a "project(Project)" command on the first
+  line.
+This warning is for project developers.  Use -Wno-dev to suppress it.
+
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /Users/xiayifan/Desktop/Toy-C-Compiler-using-Flex-Bison-LLVM-master/cmake-build-debug

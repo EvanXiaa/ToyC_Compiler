@@ -46,6 +46,7 @@ static Type *typeOf(const IdentiferNode &type, bool isPtr) {
     return Type::getVoidTy(llvmContext);
 }
 
+///该函数用于在符号表中搜索变量值
 static Value *findIdentifierValue(CodeGenContext &context, string name) {//搜索符号表
     if (context.isBlocksEmpty()) {
         cout << "全局搜索" << endl;
@@ -82,14 +83,14 @@ static Value *findIdentifierValue(CodeGenContext &context, string name) {//搜�
 
 /* -- Code Generation -- */
 Value *BlockNode::codeGen(CodeGenContext &context) {
-    cout << "Generating code for Block" << endl;
+    cout << "为块生成中间代码" << endl;
     StatementList::const_iterator it;
     Value *last = NULL;
     for (it = statements.begin(); it != statements.end(); it++) {
         cout << "\nGenerating code for " << typeid(**it).name() << endl;
         last = (**it).codeGen(context);
     }
-    cout << "Creating Block" << endl;
+    cout << "创建block" << endl;
 
     return last;
 }
@@ -97,7 +98,7 @@ Value *BlockNode::codeGen(CodeGenContext &context) {
 //Push Style
 
 Value *ForLoopNode::codeGen(CodeGenContext &context) {
-    cout << "Creating code for loop: " << endl;
+    cout << "创建for循环代码: " << endl;
     Function *function = context.currentBlock()->getParent();
     // declaration
     if (declaration != NULL)

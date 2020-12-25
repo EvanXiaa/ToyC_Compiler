@@ -110,46 +110,6 @@ depend:
 	$(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
-#=============================================================================
-# Target rules for targets named Toy-C-Compiler-using-Flex-Bison-LLVM-master
-
-# Build rule for target.
-Toy-C-Compiler-using-Flex-Bison-LLVM-master: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 Toy-C-Compiler-using-Flex-Bison-LLVM-master
-.PHONY : Toy-C-Compiler-using-Flex-Bison-LLVM-master
-
-# fast build rule for target.
-Toy-C-Compiler-using-Flex-Bison-LLVM-master/fast:
-	$(MAKE) -f CMakeFiles/Toy-C-Compiler-using-Flex-Bison-LLVM-master.dir/build.make CMakeFiles/Toy-C-Compiler-using-Flex-Bison-LLVM-master.dir/build
-.PHONY : Toy-C-Compiler-using-Flex-Bison-LLVM-master/fast
-
-cc.o: cc.cpp.o
-
-.PHONY : cc.o
-
-# target to build an object file
-cc.cpp.o:
-	$(MAKE) -f CMakeFiles/Toy-C-Compiler-using-Flex-Bison-LLVM-master.dir/build.make CMakeFiles/Toy-C-Compiler-using-Flex-Bison-LLVM-master.dir/cc.cpp.o
-.PHONY : cc.cpp.o
-
-cc.i: cc.cpp.i
-
-.PHONY : cc.i
-
-# target to preprocess a source file
-cc.cpp.i:
-	$(MAKE) -f CMakeFiles/Toy-C-Compiler-using-Flex-Bison-LLVM-master.dir/build.make CMakeFiles/Toy-C-Compiler-using-Flex-Bison-LLVM-master.dir/cc.cpp.i
-.PHONY : cc.cpp.i
-
-cc.s: cc.cpp.s
-
-.PHONY : cc.s
-
-# target to generate assembly for a file
-cc.cpp.s:
-	$(MAKE) -f CMakeFiles/Toy-C-Compiler-using-Flex-Bison-LLVM-master.dir/build.make CMakeFiles/Toy-C-Compiler-using-Flex-Bison-LLVM-master.dir/cc.cpp.s
-.PHONY : cc.cpp.s
-
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -158,10 +118,6 @@ help:
 	@echo "... depend"
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
-	@echo "... Toy-C-Compiler-using-Flex-Bison-LLVM-master"
-	@echo "... cc.o"
-	@echo "... cc.i"
-	@echo "... cc.s"
 .PHONY : help
 
 

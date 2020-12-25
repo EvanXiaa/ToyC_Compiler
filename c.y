@@ -313,7 +313,10 @@ enumerator_list
 	| enumerator_list ',' enumerator
 	;
 
-
+enumerator
+	: enumeration_constant '=' constant_expression
+	| enumeration_constant
+	;
 
 
 external_declaration
