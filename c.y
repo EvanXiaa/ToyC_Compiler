@@ -298,7 +298,9 @@ direct_declarator
 		| direct_abstract_declarator '(' parameter_type_list ')'
 		;
 
-
+enumeration_constant
+	: IDENTIFIER
+	;
 
 enum_specifier
 	: ENUM '{' enumerator_list '}'

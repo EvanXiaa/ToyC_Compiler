@@ -316,7 +316,7 @@ enumerator_list
 	| enumerator_list ',' enumerator
 	;
 
-enumerator	/* identifiers must be flagged as ENUMERATION_CONSTANT */
+enumerator
 	: enumeration_constant '=' constant_expression
 	| enumeration_constant
 	;
