@@ -86,7 +86,22 @@
 				</MakeCommands>
 			</Target>
 		</Build>
+		<Unit filename="/Users/xiayifan/Desktop/Toy-C-Compiler-using-Flex-Bison-LLVM-master/c.tab.cpp">
+			<Option target="Toy-C-Compiler-using-Flex-Bison-LLVM-master"/>
+		</Unit>
+		<Unit filename="/Users/xiayifan/Desktop/Toy-C-Compiler-using-Flex-Bison-LLVM-master/c.tab.hpp">
+			<Option target="Toy-C-Compiler-using-Flex-Bison-LLVM-master"/>
+		</Unit>
 		<Unit filename="/Users/xiayifan/Desktop/Toy-C-Compiler-using-Flex-Bison-LLVM-master/cc.cpp">
+			<Option target="Toy-C-Compiler-using-Flex-Bison-LLVM-master"/>
+		</Unit>
+		<Unit filename="/Users/xiayifan/Desktop/Toy-C-Compiler-using-Flex-Bison-LLVM-master/codegen.cpp">
+			<Option target="Toy-C-Compiler-using-Flex-Bison-LLVM-master"/>
+		</Unit>
+		<Unit filename="/Users/xiayifan/Desktop/Toy-C-Compiler-using-Flex-Bison-LLVM-master/codegen.h">
+			<Option target="Toy-C-Compiler-using-Flex-Bison-LLVM-master"/>
+		</Unit>
+		<Unit filename="/Users/xiayifan/Desktop/Toy-C-Compiler-using-Flex-Bison-LLVM-master/node.h">
 			<Option target="Toy-C-Compiler-using-Flex-Bison-LLVM-master"/>
 		</Unit>
 		<Unit filename="/Users/xiayifan/Desktop/Toy-C-Compiler-using-Flex-Bison-LLVM-master/CMakeLists.txt">

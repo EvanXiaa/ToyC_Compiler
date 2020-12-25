@@ -2,7 +2,9 @@
 #include "codegen.h"
 #include "c.tab.hpp"
 #include <llvm/IR/Verifier.h>
-
+#include <llvm/Bitcode/BitcodeWriter.h>
+#include <llvm/IR/Module.h>
+///export PATH=$PATH:/usr/lib/llvm-9/bin/
 using namespace std;
 
 extern void yyerror(const char *);
@@ -12,7 +14,8 @@ void CodeGenContext::generateCode(BlockNode &rootNode) {
     rootNode.codeGen(*this);
     //生成BC文件
     string bcfile = "code.bc";
-    llvm::raw_ostream *out = new llvm::raw_fd_ostream(bcFile, errInfo, sys::fs::F_None);
+    std::error_code errInfo;
+    llvm::raw_ostream *out = new llvm::raw_fd_ostream(bcfile, errInfo, sys::fs::F_None);
     llvm::WriteBitcodeToFile(*module, *out);
     out->flush();
     delete out;

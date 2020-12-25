@@ -70,17 +70,47 @@ CMakeFiles/Toy-C-Compiler-using-Flex-Bison-LLVM-master.dir/cc.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Toy-C-Compiler-using-Flex-Bison-LLVM-master.dir/cc.cpp.s"
 	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/xiayifan/Desktop/Toy-C-Compiler-using-Flex-Bison-LLVM-master/cc.cpp -o CMakeFiles/Toy-C-Compiler-using-Flex-Bison-LLVM-master.dir/cc.cpp.s
 
+CMakeFiles/Toy-C-Compiler-using-Flex-Bison-LLVM-master.dir/codegen.cpp.o: CMakeFiles/Toy-C-Compiler-using-Flex-Bison-LLVM-master.dir/flags.make
+CMakeFiles/Toy-C-Compiler-using-Flex-Bison-LLVM-master.dir/codegen.cpp.o: ../codegen.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/xiayifan/Desktop/Toy-C-Compiler-using-Flex-Bison-LLVM-master/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/Toy-C-Compiler-using-Flex-Bison-LLVM-master.dir/codegen.cpp.o"
+	/Library/Developer/CommandLineTools/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Toy-C-Compiler-using-Flex-Bison-LLVM-master.dir/codegen.cpp.o -c /Users/xiayifan/Desktop/Toy-C-Compiler-using-Flex-Bison-LLVM-master/codegen.cpp
+
+CMakeFiles/Toy-C-Compiler-using-Flex-Bison-LLVM-master.dir/codegen.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Toy-C-Compiler-using-Flex-Bison-LLVM-master.dir/codegen.cpp.i"
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/xiayifan/Desktop/Toy-C-Compiler-using-Flex-Bison-LLVM-master/codegen.cpp > CMakeFiles/Toy-C-Compiler-using-Flex-Bison-LLVM-master.dir/codegen.cpp.i
+
+CMakeFiles/Toy-C-Compiler-using-Flex-Bison-LLVM-master.dir/codegen.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Toy-C-Compiler-using-Flex-Bison-LLVM-master.dir/codegen.cpp.s"
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/xiayifan/Desktop/Toy-C-Compiler-using-Flex-Bison-LLVM-master/codegen.cpp -o CMakeFiles/Toy-C-Compiler-using-Flex-Bison-LLVM-master.dir/codegen.cpp.s
+
+CMakeFiles/Toy-C-Compiler-using-Flex-Bison-LLVM-master.dir/c.tab.cpp.o: CMakeFiles/Toy-C-Compiler-using-Flex-Bison-LLVM-master.dir/flags.make
+CMakeFiles/Toy-C-Compiler-using-Flex-Bison-LLVM-master.dir/c.tab.cpp.o: ../c.tab.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/xiayifan/Desktop/Toy-C-Compiler-using-Flex-Bison-LLVM-master/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/Toy-C-Compiler-using-Flex-Bison-LLVM-master.dir/c.tab.cpp.o"
+	/Library/Developer/CommandLineTools/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Toy-C-Compiler-using-Flex-Bison-LLVM-master.dir/c.tab.cpp.o -c /Users/xiayifan/Desktop/Toy-C-Compiler-using-Flex-Bison-LLVM-master/c.tab.cpp
+
+CMakeFiles/Toy-C-Compiler-using-Flex-Bison-LLVM-master.dir/c.tab.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Toy-C-Compiler-using-Flex-Bison-LLVM-master.dir/c.tab.cpp.i"
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/xiayifan/Desktop/Toy-C-Compiler-using-Flex-Bison-LLVM-master/c.tab.cpp > CMakeFiles/Toy-C-Compiler-using-Flex-Bison-LLVM-master.dir/c.tab.cpp.i
+
+CMakeFiles/Toy-C-Compiler-using-Flex-Bison-LLVM-master.dir/c.tab.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Toy-C-Compiler-using-Flex-Bison-LLVM-master.dir/c.tab.cpp.s"
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/xiayifan/Desktop/Toy-C-Compiler-using-Flex-Bison-LLVM-master/c.tab.cpp -o CMakeFiles/Toy-C-Compiler-using-Flex-Bison-LLVM-master.dir/c.tab.cpp.s
+
 # Object files for target Toy-C-Compiler-using-Flex-Bison-LLVM-master
 Toy__C__Compiler__using__Flex__Bison__LLVM__master_OBJECTS = \
-"CMakeFiles/Toy-C-Compiler-using-Flex-Bison-LLVM-master.dir/cc.cpp.o"
+"CMakeFiles/Toy-C-Compiler-using-Flex-Bison-LLVM-master.dir/cc.cpp.o" \
+"CMakeFiles/Toy-C-Compiler-using-Flex-Bison-LLVM-master.dir/codegen.cpp.o" \
+"CMakeFiles/Toy-C-Compiler-using-Flex-Bison-LLVM-master.dir/c.tab.cpp.o"
 
 # External object files for target Toy-C-Compiler-using-Flex-Bison-LLVM-master
 Toy__C__Compiler__using__Flex__Bison__LLVM__master_EXTERNAL_OBJECTS =
 
 Toy-C-Compiler-using-Flex-Bison-LLVM-master: CMakeFiles/Toy-C-Compiler-using-Flex-Bison-LLVM-master.dir/cc.cpp.o
+Toy-C-Compiler-using-Flex-Bison-LLVM-master: CMakeFiles/Toy-C-Compiler-using-Flex-Bison-LLVM-master.dir/codegen.cpp.o
+Toy-C-Compiler-using-Flex-Bison-LLVM-master: CMakeFiles/Toy-C-Compiler-using-Flex-Bison-LLVM-master.dir/c.tab.cpp.o
 Toy-C-Compiler-using-Flex-Bison-LLVM-master: CMakeFiles/Toy-C-Compiler-using-Flex-Bison-LLVM-master.dir/build.make
 Toy-C-Compiler-using-Flex-Bison-LLVM-master: CMakeFiles/Toy-C-Compiler-using-Flex-Bison-LLVM-master.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/xiayifan/Desktop/Toy-C-Compiler-using-Flex-Bison-LLVM-master/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable Toy-C-Compiler-using-Flex-Bison-LLVM-master"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/xiayifan/Desktop/Toy-C-Compiler-using-Flex-Bison-LLVM-master/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Linking CXX executable Toy-C-Compiler-using-Flex-Bison-LLVM-master"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/Toy-C-Compiler-using-Flex-Bison-LLVM-master.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
